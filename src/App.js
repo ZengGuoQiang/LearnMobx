@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { observer } from 'mobx-react';
-import './App.css';
+import './App.scss';
 import { extendObservable } from 'mobx';
 
 
@@ -23,7 +23,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <span>{ this.count }</span>
+          <span className="count">{ this.count }</span>
           <button style={ { width: "100px",height:"100px",textAlign:"center",lineHeight:"100px"}} onClick={this.onIncrement}>up</button>
           <button style={{width: "100px",height:"100px",textAlign:"center",lineHeight:"100px"}} onClick={this.onDecrement}>down</button>
         </header>
