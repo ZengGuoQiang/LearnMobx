@@ -21,5 +21,40 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.3.0",
+    "babel-eslint": "^9.0.0",
+    "mobx": "^5.9.0",
+    "mobx-react": "^5.4.3",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "shebang-regex": "^2.0.0",
+    "webpack": "^4.19.1"
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZengGuoQiang/LearnMobx.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZengGuoQiang/LearnMobx/issues"
+  },
+  "homepage": "https://github.com/ZengGuoQiang/LearnMobx#readme",
+    "babel": {
+    "presets": [
+      "react-app"
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-proposal-decorators",
+        {
+          "legacy": true
+        }
+      ]
+    ]
+}
 }
