@@ -1,0 +1,52 @@
+{
+    "我要租房": {
+        "type": 1,
+        "icon": "",
+        "href": "Renting"
+    },
+    "账单查询": {
+        "type": 2,
+        "icon": "",
+        "href": "BillInquiry"
+    },
+    "我要开门": {
+        "type": 3,
+        "icon": "",
+        "href": "OpenDoor"
+    },
+    "扫一扫": {
+        "type": 4,
+        "icon": "",
+        "href": "Scan"
+    },
+    "青客优惠": {
+        "type": 5,
+        "icon": "",
+        "href": "Discount"
+    },
+    "我要托管": {
+        "type": 6,
+        "icon": "",
+        "href": "Trusteeship"
+    },
+    "电费查询": {
+        "type": 7,
+        "icon": "",
+        "href": "query"
+    },
+    "在线报修": {
+        "type": 8,
+        "icon": "",
+        "href": "Repair"
+    },
+    "优惠券": {
+        "type": 9,
+        "icon": "",
+        "href": "Coupon"
+    },
+    "老带新": {
+        "type": 10,
+        "icon": "",
+        "href": "stranger"
+    }
+}

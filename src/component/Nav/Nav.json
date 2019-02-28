@@ -1,0 +1,22 @@
+{
+	"服务": {
+		"type": 1,
+		"icon": "",
+		"href": "service"
+	},
+	"找房": {
+		"type": 1,
+		"icon": "",
+		"href": "house"
+	},
+	"我的": {
+		"type": 1,
+		"icon": "",
+		"href": "mine"
+	},
+	"首页": {
+		"type": 1,
+		"icon": "",
+		"href": "home"
+	}
+}

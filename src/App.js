@@ -1,19 +1,22 @@
 import React, { Component } from 'react';
 import { observer } from 'mobx-react';
 import './App.css';
-import {extendObservable } from 'mobx';
+import { extendObservable } from 'mobx';
+
 
 class App extends Component {
   constructor () {
     super();
     extendObservable(this, {
       count:0
-    })
+    });
   }
   onIncrement = () => {
+    // eslint-disable-next-line no-invalid-this
     this.count++;
   }
   onDecrement = () => {
+    // eslint-disable-next-line no-invalid-this
     this.count--;
   }
   render() {
