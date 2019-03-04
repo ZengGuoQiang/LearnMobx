@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
+import Banner from './banner/index.js';
+import Navlist from './Navlist/index.js';
 import './index.scss';
 
 class home extends Component {
-    constructor () {
-        super();
+    constructor (props) {
+        super(props);
     }
     render(){
         return (
-            <div></div>
-        )
+            <div>home</div>
+        );
     }
 }
 export default home;

@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import './index.scss';
 
-class admin extends Component {
+class list extends Component {
     constructor () {
         super();
     }
     render(){
         return (
-            <div>admin</div>
+            <div>list</div>
         );
     }
 }
-export default admin;
+export default list;

@@ -13,6 +13,9 @@ class Nav extends Component {
                     })
         };
     }
+    componentDidMount(){
+        this.props.arrSort(this.state.navData);
+    }
     render() {
         const len = this.state.navData.length;
         const Width = 100 / len;

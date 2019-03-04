@@ -3,24 +3,28 @@
         "title": "服务",
         "icon": "iconfont iconfuwu",
         "type": "2",
-        "href": "service"
+        "href": "service",
+        "component":"buycar"
     },
     {
         "title": "找房",
         "icon": "iconfont iconchazhao_l",
         "type": "3",
-        "href": "house"
+        "href": "house",
+        "component":"list"
     },
     {
         "title": "我的",
         "icon": "iconfont iconwode",
         "type": "4",
-        "href": "mine"
+        "href": "mine",
+        "component":"admin"
     },
     {
         "title": "首页",
         "icon": "iconfont iconhome",
         "type": "1",
-        "href": "home"
+        "href": "home",
+        "component":"home"
     }
 ]

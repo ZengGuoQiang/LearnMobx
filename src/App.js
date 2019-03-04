@@ -10,16 +10,33 @@ import admin from './component/content/home/index.js';
 
 
 class App extends Component {
-  constructor () {
-    super();
-    extendObservable(this, {
-      count:0
-    });
+  constructor (props) {
+    super(props);
+    this.state = {
+      RouteContent:[]
+    };
+    this.arrSort = this.arrSort.bind(this);
+    this.renderBody = this.renderBody.bind(this);
   }
+
+  arrSort(RouteContent){
+    this.setState(() => ({RouteContent:RouteContent}));
+  }
+
+  renderBody(arr){
+    return (
+      arr.map((item,i) => {
+        console.log(arr,item.href, i ,item.component);
+        return <Route path={item.href} key={i} component={item.component} ></Route>;
+      })
+    );
+  }
+
   render() {
     return (
       <div className="App">
-        <Nav></Nav>
+        {this.renderBody(this.state.RouteContent)}
+        <Nav arrSort = {this.arrSort.bind(this)}></Nav>
       </div>
     );
   }
