@@ -42,4 +42,13 @@ class App extends Component {
   }
 }
 
+App.defaultProps={
+  routes : [
+      {path:'/home',component:home,isExact: true},
+      {path:'/list',component:list},
+      {path:'/buycar',component:buycar},
+      {path:'/admin',component:admin}
+  ]
+};
+
 export default withRouter(App);
