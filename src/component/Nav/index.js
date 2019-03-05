@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './index.scss';
 import "../../icon/iconfont.css";
 import list from './Nav.json';
-import {BrowserRouter, Route, Link} from 'react-router-dom';
+import {BrowserRouter, Route, NavLink,Link} from 'react-router-dom';
 
 class Nav extends Component {
     constructor (props) {
@@ -24,8 +24,8 @@ class Nav extends Component {
             <ul className="mainNav">
                 {
                     this.state.navData.map((item, i) => {
-                        return <li><Link key={ i } to={ { pathname: item.href } } Component={ item.href }><i className={ item.icon }></i><span>{ item.title }</span></Link></li>;
-                    })
+                        return <li key={i}><Link to={ item.href }><i className={ item.icon }></i><span>{ item.title }</span></Link></li>;
+                        })
                 }
             </ul>
         );
