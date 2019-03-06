@@ -24,7 +24,7 @@ class Nav extends Component {
             <ul className="mainNav">
                 {
                     this.state.navData.map((item, i) => {
-                        return <li key={i}><Link to={ item.href }><i className={ item.icon }></i><span>{ item.title }</span></Link></li>;
+                            return <li key={ i }><NavLink to={ { pathname: item.href } }><i className={ item.icon }></i><span>{ item.title }</span></NavLink></li>;
                         })
                 }
             </ul>

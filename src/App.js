@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import './App.scss';
 import { extendObservable } from 'mobx';
-import { Route,Router,withRouter,Switch,HashRouter } from 'react-router-dom';
+import {IndexRouter} from 'react-router';
+import { Route,withRouter,Switch,Redirect } from 'react-router-dom';
 import Nav from './component/Nav/index.js';
 import Home from './component/content/home/index.js';
-import Buycar from './component/content/home/index.js';
-import List from './component/content/home/index.js';
-import Admin from './component/content/home/index.js';
+import Buycar from './component/content/buycar/index.js';
+import List from './component/content/list/index.js';
+import Admin from './component/content/admin/index.js';
 
 
 class App extends Component {
@@ -24,28 +25,25 @@ class App extends Component {
   }
 
   renderBody() {
-    let { routelist } = this.props.Route;
+    let routelist = this.props.routes;
 
     let { history } = this.props.history;
 
     return (
-      <HashRouter history={history}>
-        <Switch>
-          {
-            routelist.map((item, i) => {
-              console.log(item.component);
-                return <Route path={ item.href } key={ i } component={ item.component } ></Route>;
+            routelist.map(item => {
+              console.log(item.component,item.href);
+                return <Route exact={item.isExact} key={item.id} path={ item.path } component={ item.component } ></Route>;
             })
-          }
-          </Switch>
-      </HashRouter>
     );
   }
 
   render() {
     return (
       <div className="App">
-          {this.renderBody()}
+        <Switch>
+          { this.renderBody() }
+          <Redirect to = {{pathname: '/home'}}/>
+        </Switch>
           <Nav arrSort={ this.arrSort.bind(this) }></Nav>
       </div>
     );
@@ -54,10 +52,10 @@ class App extends Component {
 
 App.defaultProps={
   routes : [
-      {path:'/home',component:Home,isExact: true},
-      {path:'/service',component:List},
-      {path:'/house',component:Buycar},
-      {path:'/mine',component:Admin}
+      {id:1,path:'/home',component:Home,isExact: true},
+      {id:2,path:'/service',component:List},
+      {id:3,path:'/house',component:Buycar},
+      {id:4,path:'/mine',component:Admin}
   ]
 };
 
