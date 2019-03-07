@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './index.scss';
-import "../../icon/iconfont.css";
+import "src/icon/iconfont.css";
 import list from './Nav.json';
 import {BrowserRouter, Route, NavLink,Link} from 'react-router-dom';
 

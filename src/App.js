@@ -31,7 +31,6 @@ class App extends Component {
 
     return (
             routelist.map(item => {
-              console.log(item.component,item.href);
                 return <Route exact={item.isExact} key={item.id} path={ item.path } component={ item.component } ></Route>;
             })
     );
